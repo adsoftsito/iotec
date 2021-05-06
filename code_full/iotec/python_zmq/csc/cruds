@@ -1,0 +1,67 @@
+FitoSmart - Computo Sensible al Contexto
+
+Vision
+
+
+
+https://code.google.com/archive/p/python-weather-api/
+
+-- veracruz
+http://api.meteored.mx/index.php?api_lang=mx&provincia=5649&affiliate_id=4z7u4sz5xeal
+
+-- docs
+https://cirujadigital.wordpress.com/2017/01/11/obteniendo-informacion-de-internet-para-nuestro-proyecto-iot-apis-del-clima-geolocalizacion-fechahora-and-other-issues/
+
+-- 
+http://api.openweathermap.org/data/2.5/weather?lat=-34.63&lon=-58.54&APPID=clave&units=metric&lang=es
+
+-- orizaba
+http://api.openweathermap.org/data/2.5/weather?lat=18.85&lon=-97.1&APPID=2af72ef62258728d72777bef612f2a3e&units=metric&lang=es
+Requerimientos
+
+
+
+Diseño 
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------
+
+CRUDS FitoSmart
+
+
+especies
+ id_especie  // 1
+ nombre     // jitomate
+ descripcion   // xxxx
+
+etapas
+ id_etapa    // 1
+ descripcion // jitomate _ semilla - sem1
+
+
+especies_parametros
+ id_especie       // 1
+ id_etapa         // 1   semilla-sem1, semilla-sem2, crecimiento, flor, fruto
+ variables_fosforo      // 100
+
+
+
+contexto
+
+devices
+
+lat, lng
+vars_config ( altura, temp, presion, viento, .... )
+
+

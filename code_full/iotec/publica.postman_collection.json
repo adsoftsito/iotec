@@ -1,0 +1,67 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Api_publica_node",
+		"_postman_id": "56feee0f-cd53-a052-2ab9-7d1f71b3572f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get devices",
+			"request": {
+				"url": "{{host}}:8081/api/devices",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get labels",
+			"request": {
+				"url": "{{host}}:8081/api/device/58d80bb2f04efb1b47a9530d/",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get sensors",
+			"request": {
+				"url": "{{host}}:8081/api/device/58d80bb8f04efb1b47a9530e/temp/last?amount=4",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get sensors stat",
+			"request": {
+				"url": "{{host}}:8081/api/device/58d80bb8f04efb1b47a9530e/temp/statistic",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fitotron-api",
+  "private_key_id": "fe422dfe5029e6abf074f723eff8c6a5d6b2c026",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC738AsTeT+ytO8\nm3KR7PUIxhlFPOit1DSmU2YCU3V9bNhjLlrOkTMd/4IR25mpiFIXMVSjycszlwhV\nCres/YZSGv0NX6NKLDE83V+0dQ8oIkSVkbpDRicNSQ1UOV60olKC/uuoscSWLZ6h\n3/xHNeI7lMPOjFiAdxAKWiE+F0qneuBAY02d9OgPontklOgJeCSl9GRLXqCJ7EQi\nNV+mUzj8v/cskvxicYNR64/X4F9LbqdLGkIDDZWwa0f38KJBUScNA6qnROYDvKXi\n1/ikjtgrPGmqeZUN+Gnh8aMASgtflYiePGUPUk5xrt1MFBOz1eCByYKDpU/VH6Ei\nz2/Jp10/AgMBAAECggEAGZCq/9xhquJCycmFX6IU/eqnCaruJqlXuMJkgTCGLlkf\nYO+v36gWgqCAPJnbYRxxv0IxOFB/XDfTJG9e6yVcn9OYV7eJ6s/0q0mcelvrghSX\nrJq18+2Z5s7oB2v/HSlxfO3fd4cpLx5qFbD7DV2huWXW90ZVzLVm82GsYFyfBgcQ\nq8jH8/KFbl16OR57rBCs54iv9PqQlaumbT2miSA5ofOo9P+jjQV/7gPY7xjRLxog\nzfm3fXQB+HEYBTCSO0AaW9+IZWoCMvbsakG6Y4wusr2rtEMslk13VrUp6SPZ/ghy\nQL09kQ7qEg/rGWNCudFWcBgsrMep/tcUL7Y3R/d4wQKBgQDpY+fEUcDYsf0oik2f\n+90QRMqF2/b5sgY/Cemt2QgGe/DKAkCaKvzOzlyZxYv56VWLA4V8sFuHw4smFv3b\n3mZjveRj7rH0eHfgSezrn04VXfan5if8xXURgmImTi7L7kaRm1gh9Fsq4o3K1QL4\nHpsl8H3hLqAW9Faxq5apBHJoLwKBgQDOEwonu9sljw0qPslaskDbiSJOHG36xd1K\nXZb30n8TcC4cGFWyocCw9+GqJVcWGX3fBJ+xxPWzxo0Z8p0/anxe9CCWyJSP6mzr\nr1y1QiaS83+O2Ch2p6Snihad/GeEDaDw5D+J1Aw77mA/1yoFcsfIXNxX/VezcCtP\nYOCBeAYH8QKBgQCK+56CDzkrEdsy8CFHuyGq1XxQ+Gt7yGLl2U5Z45te2SHL+klk\nRWMk+Ei2nag8m5IAZYlxdkgbcfwEI77q1ubcULGYPQWmErM4Um2O5uAF413GIE4B\nvch4M8+lBfviHzPQ89Qo7C36PM25Ut4gyYEUt8EOfsiAwuJ5jTf70JUcqwKBgE6P\nQ5fSLcErv8ETHn/M5JzMsp9Eh0jKlYn8E8l2HauzYGClhkYLFAJi/Ux337M1FJ8o\njBihFWnrj28M5pV+attoBeR1ou0aWVugBp+zEDGFUmOKVCKn1kVohybDSlM1Pt2W\npgJNLDzMqzSrOgHJuA/SFs4UbpKheGFSdUPmFaaBAoGACDYTZw84LkBXSpfvyLBn\n2Bvwl9+KJmjr9gmSk4vS4PNJTEvCz2W9XBbF/U2le8O+rGZpdHCdwiIyVefIQuJi\nLWnJlMUVFm5UB4vLfM+kkmgi6QcepKFKXW7/vUhzzZuxNSUATAlZcD/pTReta1D3\nikXf7Ja4dfPn5Pyy/3bBggU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "fitotron-api@appspot.gserviceaccount.com",
+  "client_id": "110704856664730136572",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/fitotron-api%40appspot.gserviceaccount.com"
+}

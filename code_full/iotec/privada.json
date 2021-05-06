@@ -1,0 +1,310 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Node Api Token",
+		"_postman_id": "367e0ae8-3250-4e96-9324-e2a4aa379e95",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registro",
+			"request": {
+				"url": "{{host}}:8082/api/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ricardo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "pass",
+							"value": "hola",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "pass_confirm",
+							"value": "hola",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", jsonData.token);"
+					}
+				}
+			],
+			"request": {
+				"url": "{{host}}:8082/api/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "ricardo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "hola",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Mis dispositivos",
+			"request": {
+				"url": "{{host}}:8082/api/device?token={{token}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic cmljYXJkbzpob2xh",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Ricardo",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "hola",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "pass_confirm",
+							"value": "hola",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Subir sensor",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Posted\"] = jsonData.success === true;\n"
+					}
+				}
+			],
+			"request": {
+				"url": "{{host}}:8082/api/device/{{device}}/sensor",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "name",
+							"value": "Temperatura",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "value",
+							"value": "153",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Crear dispositivo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonData = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"device\", jsonData.device._id);"
+					}
+				}
+			],
+			"request": {
+				"url": "{{host}}:8082/api/device",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "name",
+							"value": "Hola que tal",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "desc",
+							"value": "Una raspberry que mide el clima",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Editar dispositivo",
+			"request": {
+				"url": "{{host}}:8082/api/device/patch",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "name",
+							"value": "Raspberry nueva :)",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "desc",
+							"value": "Una raspberry que mide el clima",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "id",
+							"value": "{{device}}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar device",
+			"request": {
+				"url": "{{host}}:8082/api/device/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "id",
+							"value": "{{device}}",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function encode(r){
+			return r.replace(/[\x26\x0A\<>'"]/g,function(r){return"&#"+r.charCodeAt(0)+";"})
+		}
+	</script>
+	<!-- Template site title
+   ================================================== -->
+	<title>Ricardo Lopez - A01327311</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/et-line-font.css">
+
+	<!-- Nivo Lightbox CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+
+	<!-- Owl Carousel CSS
+   ================================================== -->
+   	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+
+
+<script type="text/javascript">
+
+function getData() 
+{
+
+    jQuery.support.cors = true;
+    {                         
+     $.ajax({
+        url: 'http://' + window.location.hostname + ":8081/api/devices",
+        dataType: 'json',
+        cache: false,
+        contentType: false,
+        processData: true,
+        //data: {empresa: sessionStorage.empresa},                         
+        type: 'get',
+        crossDomain: true,
+        success: function(response) {
+	  	  tweets = response;
+          tweets.forEach(function (tweet) 
+          {
+          	var template = $('.template').clone().removeClass('template').removeAttr('hidden');
+          	template.find('h3').html(encode(tweet.name));
+          	template.find('h5').html(encode(tweet.owner.name));
+          	template.find('p').html(encode(tweet.description));
+          	template.find('a').attr('href', 'device/' + tweet._id + '/' + tweet.name);
+          	$('#divTeam').append(template);
+          }
+        )}});          
+     
+    }
+}
+
+
+</script>
+	
+</head>
+
+<body onload="getData()" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+<!-- Preloader section
+================================================== -->
+<section class="preloader">
+	<div class="sk-three-bounce">
+      	<div class="sk-child sk-bounce1"></div>
+      	<div class="sk-child sk-bounce2"></div>
+     	 <div class="sk-child sk-bounce3"></div>
+	</div>
+</section>
+
+
+<!-- Navigation section
+================================================== -->
+<section class="navbar navbar-default navbar-fixed-top sticky-navigation" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">IOT</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right main-navigation">
+				<li><a href="#home" class="smoothScroll">HOME</a></li>
+				<li><a href="#about" class="smoothScroll">ACERCA DE</a></li>
+				<li><a href="#team" class="smoothScroll">DISPOSITIVOS</a></li>
+				<li><a href="#service" class="smoothScroll">SERVICIO</a></li>
+				<li><a href="#portfolio" class="smoothScroll">PORTFOLIO</a></li>
+			</ul>
+		</div>
+
+	</div>
+</section>
+
+
+<!-- Home section
+================================================== -->
+<section id="home" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<h1>Introduccion</h1>
+				<h2 class="wow bounceIn">IOT te permite conocer m&aacute;s mediante dispositivos</h2>
+				<p class="wow fadeIn" data-wow-delay="0.3s">Registra tus dispositivos, sus lecturas y permite conocer m&aacute;s sobre el mundo. Observa las lecturas de los demas y accede mediante nuestra REST API.</p>
+				<a href="#about" class="btn btn-default section-btn smoothScroll wow fadeInUp" data-wow-delay="0.6s">Aprender m&aacute;s</a>
+				
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+<!-- About section
+================================================== -->
+<section id="about" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
+				<div class="section-title">
+					<h5>ACERCA DE</h5>
+					<h3>Este es un proyecto de la materia de aplicaciones en la nube</h3>
+					<p>Mediante microservicios te damos a conocer la informaci&oacute;n de los dispositivos conectados a la red. As&iacute;mismo, nuestra API segura te permite mediante el uso de tokens darnos a conocer m&aacute;s sobre tus dispositivos.</p>
+				</div>
+			</div>	
+
+
+
+			<div class="col-md-4 col-sm-4">
+				<i class="icon fa fa-key wow fadeInUp" data-wow-delay="0.9s"></i>
+				<h3>Muchos valores</h3>
+				<p>Sabemos que un dispositivo tiene muchos valores por lo que solo deberas etiquetarlos.</p>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<i class="icon fa fa-sort-numeric-desc  wow fadeInUp" data-wow-delay="0.9s"></i>
+				<h3>Todo sobre numeros</h3>
+				<p>Por ahora nuestra API solo acepta valores numericos</p>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<i class="icon fa fa-user wow fadeInUp" data-wow-delay="0.9s"></i>
+				<h3>Un registro muy sencillo</h3>
+				<p>Solo necesitamos tu nombre y un password y estas listo para comenzar.</p>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Counter section
+================================================== -->
+<section id="counter" class="paralla-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-3 col-sm-3 counter-item">	
+				<h3 class="counter-number" data-from="1" data-to="1" data-speed="100"></h3>
+				<span class="counter-text">Dispositivo</span>
+            </div> 
+            <div class="col-md-3 col-sm-3 counter-item">	
+				<h3 class="counter-number" data-from="1" data-to="10" data-speed="100"></h3>
+				<span class="counter-text">Sensores</span>
+            </div>   
+            <div class="col-md-3 col-sm-3 counter-item">	
+				<h3 class="counter-number" data-from="1" data-to="1024" data-speed="1"></h3>
+				<span class="counter-text">Lecturas</span>
+            </div> 
+             <div class="col-md-3 col-sm-3 counter-item">
+				<h3 class="counter-number" data-from="1" data-to="10000000" data-speed="1"></h3>
+				<span class="counter-text">Infinitas Posibilidades</span>
+            </div> 
+              
+
+		</div>
+	</div>
+</section>
+
+
+<!-- team section
+================================================== -->
+<section id="team" class="parallax-section">
+	<div class="container">
+		<div class="row" id="divTeam">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-8 col-sm-8">
+				<div class="section-title">
+					<h5>Dispositivos</h5>
+					<h3>Aqui podr&aacute;s ver lo que tenemos registrado</h3>
+				</div>
+			</div>	
+
+			<div class="col-md-12 col-sm-12"></div>
+
+			<div class="col-md-3 col-sm-3 wow fadeInUp template" data-wow-delay="0.6s" hidden="true">
+				<span><i class="fa fa-linux fa-5x" aria-hidden="true"></i></span>
+				<a><h3>Jonny Dennis</h3></a>
+				<h5>Hola que tal</h5>
+				<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Service section
+================================================== -->
+<section id="service" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-12 col-sm-12 text-center">
+				<div class="section-title">
+					<h5>Empieza hoy</h5>
+				</div>
+			</div>	
+
+
+			<div class="col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.6s">
+				<h3>Hoy mismo puedes empezar a colaborar.</h3>
+				<p>Aprovecha que por el momento el servicio es gratuito y da click en alguno de los dispositivos.</p>
+			</div>
+
+			<div class="col-md-6 col-sm-12">
+
+				<div class="col-md-6 col-sm-6">
+					<div class="media">
+						<div class="media-object pull-left">
+							<i class="icon fa fa-server wow fadeInUp" data-wow-delay="0.9s"></i>
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Registrate</h3>
+							<p>Encuentra nuestra api de token en el 8082.</p>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-object pull-left">
+							<i class="icon fa fa-desktop wow fadeInUp" data-wow-delay="0.9s"></i>
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Ve otros dispositivos</h3>
+							<p>La API p&uacute;blica est&aacute; en el 8081</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6">
+					<div class="media">
+						<div class="media-object pull-left">
+							<i class="icon fa fa-pie-chart wow fadeInUp" data-wow-delay="0.9s"></i>
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Buenas gr&aacute;ficas</h3>
+							<p>Da click en los dispositivos de arriba</p>
+						</div>
+					</div>
+					<div class="media">
+						<div class="media-object pull-left">
+							<i class="icon fa fa-user wow fadeInUp" data-wow-delay="0.9s"></i>
+						</div>
+						<div class="media-body">
+							<h3 class="media-heading">Registro amigable</h3>
+							<p>Entra ahora a <a href="signup">/signup</a> y <a href="login">/login</a>.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+</footer>
+
+
+<!-- copyright section
+================================================== -->
+<section id="copyright">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				<div class="copyright-text wow fadeInUp" data-wow-delay="0.9s">
+					<ul class="social-icon">
+						<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+						<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+						<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+						<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="1s"></a></li>
+					</ul>
+					<p> &copy; 2016 | Ricardo Lopez - All Rights Reserved.</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

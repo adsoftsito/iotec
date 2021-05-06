@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Install, Google Compute Engine Client}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Google App Engine (GAE)}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Instalaci\IeC {\'o}n de GCE Client (I)}{8}{0}{2}
+\beamer@subsectionintoc {2}{3}{Instalaci\IeC {\'o}n de GAE (II)}{9}{0}{2}
+\beamer@sectionintoc {3}{MongoDB}{12}{0}{3}
+\beamer@subsectionintoc {3}{1}{MongoDB - Connect}{13}{0}{3}
+\beamer@subsectionintoc {3}{2}{MongoDB - Create database/show collections}{14}{0}{3}
+\beamer@subsectionintoc {3}{3}{Create, Read, Update, Delete}{15}{0}{3}

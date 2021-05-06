@@ -1,0 +1,3 @@
+#export GOOGLE_APPLICATION_CREDENTIALS=/home/adsoft/googleappengine/zmq/compute_context/fitotron-api-fe422dfe5029.json
+export GOOGLE_APPLICATION_CREDENTIALS=/home/adsoft/googleappengine/zmq/compute_context/platform-mr3-api-7c1d61c3747b.json
+

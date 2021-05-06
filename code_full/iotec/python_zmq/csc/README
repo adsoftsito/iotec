@@ -1,0 +1,14 @@
+#export GOOGLE_APPLICATION_CREDENTIALS=/home/adsoft/googleappengine/zmq/compute_context/fitotron-api-fe422dfe5029.json
+export GOOGLE_APPLICATION_CREDENTIALS=/home/adsoft/googleappengine/zmq/compute_context/platform-mr3-api-7c1d61c3747b.json
+
+
+config in google app engine -> settings
+
+Default Cloud Storage Bucket
+
+Up to 5GB of Cloud Storage may be used with App Engine applications without enabling billing. Learn more 
+
+platform-mr3-api.appspot.com
+
+Click in Create Button
+
